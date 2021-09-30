@@ -1,0 +1,8 @@
+<ul id='entry_list'>
+  <% @entries.each do |e| %>
+    <li>
+      <%= link_to "#{e.feed.name}: #{e.title}", entry_url(e) %> --
+      <%= e.published_date %>
+    </li>
+  <% end %>
+</ul>

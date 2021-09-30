@@ -1,0 +1,183 @@
+@import '/css/normalize.css';
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  line-height: 1.2em;
+  font-size: 14px;
+}
+
+body {
+  background-color: #ccc;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+h1 {
+  line-height: 1.2em;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color:  #fff;
+  box-shadow: 0 0 5px #333;
+}
+
+main {
+  padding: 1rem;
+}
+
+.flash {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 1em;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.flash a {
+  color: white;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover {
+  color: #777;
+  text-decoration: none;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+label {
+  display: block;
+}
+
+.entry_date h1 {
+  margin-bottom: .5em;
+  border-bottom: 1px dashed #333;
+}
+
+.entry_list {
+  column-count: 1;
+  list-style-type:  none;
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (min-width: 640px) {
+  .entry_list {
+    column-count: 2;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .entry_list {
+    column-count: 3;
+  }
+}
+
+.entry_list li {
+  break-inside: avoid-column;
+  overflow:  hidden;
+  padding: 5px 5px;
+  border:  1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 1.5em;
+  background:  #fff;
+}
+
+.entry_list li:hover {
+  box-shadow: 0 0 3px #333;
+}
+
+.entry_list h2 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+.entry_list h2 a {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.post {
+  background-color:  #fff;
+  padding:  5px;
+  border-radius:  5px;
+  border:  1px solid #999;
+}
+
+.post .content {
+  border-top:  1px dashed #999;
+  border-bottom:  1px dashed #999;
+  margin-top:  1em;
+  margin-bottom:  1em;
+}

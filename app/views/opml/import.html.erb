@@ -1,0 +1,10 @@
+<%= form_with url: opml_importer_url, multipart: true do |f| %>
+  <div>
+    <%= f.label 'file' %>
+    <%= f.file_field 'file' %>
+  </div>
+
+  <div>
+    <%= f.submit 'Upload' %>
+  </div>
+<% end %>

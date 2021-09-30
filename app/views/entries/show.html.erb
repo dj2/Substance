@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<article class='post'>
+  <h1><%= @entry.title %></h1>
+  <small><%= link_to @entry.url, @entry.url %></small><br />
+  <small><%= @entry.published_date %></small><br />
+  <small><strong>Feed</strong>: <%= link_to @entry.feed.name, @entry.feed %></small><br />
+
+  <% unless @entry.tags.empty? %>
+    <small><strong>Tags:</strong>
+      <% @entry.tags.each do |t| %>
+        <%= link_to t.name, show_tag_url(t.name) %>
+      <% end %>
+    </small>
+  <% end %>
+
+  <div class='content'><%= to_html(@entry.content) %></div>
+
+  <% if @entry.read %>
+    <%= link_to 'Mark unread', unread_entry_path(@entry) %> |
+  <% else %>
+    <%= link_to 'Mark read', entry_path(@entry) %> |
+  <% end %>
+
+  <%= link_to @entry.starred? ? 'Unstar' : 'star', star_entry_path(@entry) %> |
+  <%= link_to 'Back', feed_path(@entry.feed) %>
+</article>

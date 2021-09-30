@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Substance</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel='stylesheet' href='/css/substance.css' />
+  </head>
+
+  <body>
+    <header>
+      <a href="<%= root_url %>">Home</a>
+      <a href="<%= starred_entries_url %>">Starred</a>
+      <a href="<%= feeds_url %>">Feeds</a>
+      <a href="<%= tags_url %>">Tags</a>
+      <a href="<%= feeds_sync_url %>">Sync</a>
+      <a href="<%= opml_import_url %>">Import</a>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

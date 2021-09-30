@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feeds</h1>
+
+<ul>
+  <% @feeds.each do |feed| %>
+    <li><%= link_to feed.name, feed %> : <%= feed.unread_count %> unread</li>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New Feed', new_feed_path %>

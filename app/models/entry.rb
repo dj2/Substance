@@ -22,8 +22,8 @@ class Entry < ApplicationRecord
       .includes(%i[feed tags])
   }
 
-  scope :tagged, lambda { |_tag|
-    tagged_with(@tag)
+  scope :tagged, lambda { |tag|
+    tagged_with(tag)
       .includes(%i[feed tags])
   }
 

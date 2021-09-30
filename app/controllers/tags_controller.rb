@@ -8,8 +8,8 @@ class TagsController < ApplicationController
 
   def show
     @tag = params[:id]
-    @data = Entry.goup_by_day(Entry.tagged(@tag)
-                   .where(read: false))
+    @data = Entry.group_by_day(
+                Entry.tagged(@tag).where(read: false))
   end
 
   def all

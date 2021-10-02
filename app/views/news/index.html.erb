@@ -4,16 +4,16 @@
     <ul class='entry_list'>
       <% data[:entries].each do |e| %>
         <li>
-          <h2><%= link_to e.title, entry_url(e) %></h2>
+          <h2><%= link_to e.title, e %></h2>
           <small><%= link_to e.feed.name, e.feed %></small>
           <% unless e.tags.empty? %>
             <small>:
               <% e.tags.each do |t| %>
-                <%= link_to t.name, show_tag_url(t.name) %>
+                <%= link_to t.name, show_entries_tagged_url(t.name) %>
               <% end %>
             </small>
           <% end %>
-          <div><%= to_html(e.content[0..250]) %></div>
+          <div><%= e.content[0..250] %></div>
         </li>
       <% end %>
     </ul>

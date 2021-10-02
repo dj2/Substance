@@ -5,6 +5,9 @@ require 'test_helper'
 class NewsControllerTest < ActionDispatch::IntegrationTest
   test 'should get unread entries' do
     e1 = create(:entry)
+    e1.tag_list = 'Programming'
+    e1.save!
+
     e2 = create(:entry)
     e2.read = true
     e2.save!

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Notes</h1>
+
+<ul class='entry_list'>
+  <% @notes.each do |n| %>
+    <li>
+      <h2><%= link_to n.title, n %></h2>
+      <div><%= to_html(n.content[0..250]) %></div>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+<%= link_to 'New Note', new_note_path %>

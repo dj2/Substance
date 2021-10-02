@@ -168,16 +168,35 @@ label {
   padding: 5px 0px;
 }
 
-.post {
+.post,
+#note {
   background-color:  #fff;
   padding:  5px;
   border-radius:  5px;
   border:  1px solid #999;
 }
 
-.post .content {
+.post .content,
+#note .content {
   border-top:  1px dashed #999;
   border-bottom:  1px dashed #999;
   margin-top:  1em;
   margin-bottom:  1em;
+}
+
+form {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px #999;
+  margin-bottom: 1em;
+}
+
+input[type=text] {
+  width:  -webkit-fill-available;
+}
+
+textarea {
+  width:  -webkit-fill-available;
+  height: 50vh;
 }

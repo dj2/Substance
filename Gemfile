@@ -11,6 +11,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 
 gem 'acts-as-taggable-on', '~> 8.0'
 gem 'nokogiri'
+gem 'paper_trail'
 gem 'redcarpet'
 gem 'reverse_markdown'
 

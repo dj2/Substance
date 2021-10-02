@@ -5,7 +5,7 @@
       <% data[:entries].each do |e| %>
         <li>
           <h2><%= link_to e.title, entry_url(e) %></h2>
-          <small><%= link_to e.feed.name, feed_url(e.feed) %></small>
+          <small><%= link_to e.feed.name, e.feed %></small>
           <% unless e.tags.empty? %>
             <small>:
               <% e.tags.each do |t| %>
@@ -13,7 +13,7 @@
               <% end %>
             </small>
           <% end %>
-          <div><%= e.content[0..250] %></div>
+          <div><%= to_html(e.content[0..250]) %></div>
         </li>
       <% end %>
     </ul>

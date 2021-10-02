@@ -13,4 +13,9 @@ FactoryBot.define do
     published_date { DateTime.now }
     feed
   end
+
+  factory :note do
+    sequence(:title) { |n| "Note #{n}" }
+    content { "Note content" }
+  end
 end

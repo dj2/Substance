@@ -17,5 +17,7 @@ Rails.application.routes.draw do
   get 'sync/feeds', to: 'sync#feeds', as: 'feeds_sync'
   resources :feeds
 
+  resources :notes, except: [:destroy]
+
   root to: 'news#index'
 end

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<main id='note'>
+  <h1><%= @note.title %></h1>
+  <% unless @note.tags.empty? %>
+    <small><strong>Tags:</strong>
+      <% @note.tags.each do |t| %>
+        <%= link_to t.name, show_tag_url(t.name) %>
+      <% end %>
+    </small>
+  <% end %>
+
+  <div class='content'><%= to_html(@note.content) %></div>
+
+  <%= link_to 'Edit', edit_note_path(@note) %> |
+  <%= link_to 'Back', notes_path %>
+</main>
+

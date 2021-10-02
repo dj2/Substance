@@ -19,9 +19,9 @@
 <ul class='entry_list'>
   <% @feed.entries.order(published_date: :desc).each do |e| %>
     <li>
-      <h2><%= link_to e.title, entry_url(e) %></h2>
+      <h2><%= link_to e.title, e %></h2>
       <small><%= e.published_date %></small>
-      <div><%= e.content[0..250] %></div>
+      <div><%= to_html(e.content[0..250]) %></div>
     </li>
   <% end %>
 </ul>

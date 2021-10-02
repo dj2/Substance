@@ -1,5 +1,10 @@
 <ul>
   <% @tags.each do |tag| %>
-    <li><%= link_to tag.name, show_tag_url(tag.name) %></li>
+    <li>
+      <%= tag.name %> --
+      <%= link_to 'entries', show_entries_tagged_url(tag.name) %>
+      &nbsp;
+      <%= link_to 'notes', show_notes_tagged_url(tag.name) %>
+    </li>
   <% end %>
 </ul>

@@ -1,0 +1,21 @@
+<h1><%= @tag.name %></h1>
+
+<% @data.each do |data| %>
+  <div class='entry_date'>
+    <h1><%= data[:date] %></h1>
+    <ul class='entry_list'>
+      <% data[:entries].each do |note| %>
+        <li>
+          <h2><%= link_to note.title, note %></h2>
+          <% unless note.tags.empty? %>
+            <small>Tags:
+              <% note.tags.each do |tag| %>
+                <%= link_to tag.name, show_notes_tagged_url(tag.name) %>
+              <% end %>
+            </small>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<h1><%= @tag.name %></h1>
+
+<% @data.each do |data| %>
+  <div class='entry_date'>
+    <h1><%= data[:date] %></h1>
+    <ul class='entry_list'>
+      <% data[:entries].each do |entry| %>
+        <li>
+          <h2><%= link_to entry.title, entry %></h2>
+          <small><%= link_to entry.feed.name, entry.feed %></small>
+          <% unless entry.tags.empty? %>
+            <small>:
+              <% entry.tags.each do |tag| %>
+                <%= link_to tag.name, show_entries_tagged_url(tag.name) %>
+              <% end %>
+            </small>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

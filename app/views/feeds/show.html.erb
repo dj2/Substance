@@ -6,7 +6,7 @@
 <% unless @feed.tags.empty? %>
   <small><strong>Tags</strong>:
     <% @feed.tags.each do |t| %>
-      <%= link_to t.name, show_tag_url(t.name) %>
+      <%= link_to t.name, show_entries_tagged_url(t.name) %>
     <% end %>
   </small>
 <% end %>

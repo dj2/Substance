@@ -2,7 +2,7 @@
 
 # Controller for interacting with feed entries
 class EntriesController < ApplicationController
-  before_action :set_entry, only: %i[show star unread]
+  before_action :set_entry, only: %i[show star read unread]
 
   def starred
     @entries = Entry.starred
@@ -13,6 +13,12 @@ class EntriesController < ApplicationController
 
     @entry.read = true
     @entry.save
+  end
+
+  def read
+    @entry.read = true
+    @entry.save
+    render json: 'ok'
   end
 
   def unread

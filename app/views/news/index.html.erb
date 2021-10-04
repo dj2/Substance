@@ -13,6 +13,10 @@
               <% end %>
             </small>
           <% end %>
+          <br />
+          <small>
+            <%= link_to 'mark read', read_entry_url(e), remote: true %>
+          </small>
           <div><%= e.content[0..250] %></div>
         </li>
       <% end %>

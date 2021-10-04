@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'entries/tagged/:id', to: 'tags#show_entries', as: 'show_entries_tagged'
 
   get 'entries/:id', to: 'entries#show', as: 'entry'
+  get 'entries/:id/read', to: 'entries#read', as: 'read_entry'
   get 'entries/:id/unread', to: 'entries#unread', as: 'unread_entry'
   get 'entries/:id/star', to: 'entries#star', as: 'star_entry'
 
